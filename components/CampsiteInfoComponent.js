@@ -158,7 +158,6 @@ class CampsiteInfo extends Component {
     handleComment(campsiteId) {
         this.props.postComment(campsiteId, this.state.rating, this.state.author, this.state.text);
         this.toggleModal();
-
     }
 
     resetForm() {
@@ -216,7 +215,7 @@ class CampsiteInfo extends Component {
                         placeholder='Comment'
                         leftIcon={{type:'font-awesome', name:'comment-o'}}
                         leftIconContainerStyle={{paddingRight: 10}}
-                        onChangeText={comment => this.setState({comment: comment})}
+                        onChangeText={text => this.setState({text: text})}
                         value={this.state.text}
                         />
                         <View>
@@ -224,7 +223,7 @@ class CampsiteInfo extends Component {
                                 title='Submit'
                                 color='#5637DD'
                                 onPress={() => {
-                                    this.handleComment();
+                                    this.handleComment(campsiteId);
                                     this.resetForm();
                                 }}
                             />

@@ -1,4 +1,3 @@
-import { ActionSheetIOS } from 'react-native';
 import * as ActionTypes from './ActionTypes';
 
 export const comments = (state = { errMess: null, comments: []}, action) => {
